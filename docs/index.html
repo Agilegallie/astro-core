@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRO-CORE — Deep Space Observation UI</title>
+    <meta name="description" content="Android UI prototype for the ASTRO-CORE asteroid / NEO observation app, built from Google Stitch exports for World Asteroid Day.">
+    
+    <!-- SEO & Icons -->
+    <link rel="icon" href="https://www.gstatic.com/images/branding/productlogos/sites_2026/v2/ico/sites_2026_16dp.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Vanilla CSS Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Stars Background Animation Layer -->
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">ASTRO-CORE</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#hero">Overview</a>
+                <a href="#gallery">Screenshots</a>
+                <a href="#narrative">Inspiration</a>
+                <a href="#simulator">Simulator</a>
+                <a href="#setup">Setup Guide</a>
+                <a href="https://github.com/Agilegallie/astro-core" target="_blank" class="nav-btn">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">WORLD ASTEROID DAY PROJECT</span>
+                    <h1>Deep Space NEO Observation UI</h1>
+                    <p class="hero-subtitle">An Android UI prototype for telescope telemetry calibration, target viewfinder HUD, and encrypted NASA data uplink, built with Jetpack Compose.</p>
+                    <div class="hero-ctas">
+                        <a href="#simulator" class="btn btn-primary">Try Interactive Simulator</a>
+                        <a href="#gallery" class="btn btn-secondary">Browse Screenshots</a>
+                    </div>
+                </div>
+                
+                <!-- Main YouTube Video Showcase -->
+                <div class="video-showcase-wrapper">
+                    <div class="video-container glass-card">
+                        <div class="video-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="video-title">astro-core-walkthrough.mp4</span>
+                        </div>
+                        <div class="video-aspect">
+                            <iframe src="https://www.youtube.com/embed/lqP9ROKyQIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshot Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Application Interface Gallery</h2>
+                    <p>High-fidelity UI screens exported from Google Stitch, showcasing dashboard widgets, radar indicators, coordinates, and secure data tunnels.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Card 1 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/dashboard.jpg" alt="World Asteroid Day Launch Screen">
+                        </div>
+                        <div class="card-info">
+                            <h3>World Asteroid Day Banner</h3>
+                            <p>Official cover and conceptual space imagery for the prototype.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/dashboard.jpg" alt="App Launch Dashboard">
+                        </div>
+                        <div class="card-info">
+                            <h3>Astro Dashboard</h3>
+                            <p>Overview of system health, satellite connections, and local coordinates.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/viewfinder.jpg" alt="NEO Search Target Acquisition">
+                        </div>
+                        <div class="card-info">
+                            <h3>Observation Viewfinder HUD</h3>
+                            <p>Visual calibration for target acquisition overlaying telescope coordinate grids.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/viewfinder.jpg" alt="Telescope Calibration Settings">
+                        </div>
+                        <div class="card-info">
+                            <h3>Telescope Sync Console</h3>
+                            <p>Sync options, motor temperature bars, and exposure ISO toggles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/verification.jpg" alt="GPS Observation Capture">
+                        </div>
+                        <div class="card-info">
+                            <h3>Precise Coordinate Logging</h3>
+                            <p>Gathers GPS latitude, longitude, and astronomical Right Ascension metadata.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/viewfinder.jpg" alt="Satellite Connection Sync">
+                        </div>
+                        <div class="card-info">
+                            <h3>Uplink Calibration</h3>
+                            <p>Logs noise reduction levels, star magnitude indices, and exposure configurations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/verification.jpg" alt="Observation Analysis Report">
+                        </div>
+                        <div class="card-info">
+                            <h3>Observation Verification Form</h3>
+                            <p>Encrypted data entry portal for local observers to verify asteroid signals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/success.jpg" alt="Signal uplink Stepper">
+                        </div>
+                        <div class="card-info">
+                            <h3>Transmission Pipeline</h3>
+                            <p>Real-time stepper demonstrating verification, packet hashing, and secure delivery.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/success.jpg" alt="Reference ID Uplink Verification">
+                        </div>
+                        <div class="card-info">
+                            <h3>Uplink Packet Details</h3>
+                            <p>Secure pipeline transmission tracking the payload metadata verification ID.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="gallery-card glass-card">
+                        <div class="phone-frame">
+                            <img src="images/success.jpg" alt="NASA Submission Pipeline">
+                        </div>
+                        <div class="card-info">
+                            <h3>Verification Success Screen</h3>
+                            <p>Displays confirmation, reference keys, payload byte sizes, and target statuses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Narrative Section -->
+        <section id="narrative" class="narrative-section">
+            <div class="container">
+                <div class="narrative-grid">
+                    <div class="narrative-text">
+                        <span class="section-title">BACKGROUND & INSPIRATION</span>
+                        <h2>World Asteroid Day Awareness</h2>
+                        <p>June 30th is World Asteroid Day. This application was built to promote asteroid awareness and STEM education, empowering developers and observers to model asteroid detection pipelines.</p>
+                        <p class="quote">"I built this World Asteroid Day app as a way of promoting asteroid awareness and STEM education. I'd be delighted if the World Asteroid Day team found any of the ideas or code useful. Feel free to adapt, extend, or incorporate any part of it into future educational projects."</p>
+                        <p>The working MVP code is open-source and hosted on GitHub for global dev teams to adapt for educational or research purposes.</p>
+                    </div>
+                    
+                    <div class="narrative-video glass-card">
+                        <div class="video-header">
+                            <span class="dot"></span>
+                            <span class="video-title">Deep Impact Clip</span>
+                        </div>
+                        <div class="video-aspect">
+                            <iframe src="https://www.youtube.com/embed/SaKs3xJ6OHA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="narrative-caption">
+                            This app's visual aesthetics and observational pipeline were inspired by the asteroid sighting scene in the classic sci-fi film <em>"Deep Impact"</em>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulator Section -->
+        <section id="simulator" class="simulator-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live App Interactive Simulator</h2>
+                    <p>Click through the simulated application screens below to experience the observational pipeline walkthrough, rendered purely in HTML/CSS.</p>
+                </div>
+
+                <div class="simulator-wrapper">
+                    <!-- Navigation sidebar for the simulator -->
+                    <div class="simulator-sidebar">
+                        <button class="sim-nav-btn active" data-screen="home">
+                            <span class="sim-nav-icon">⚏</span>
+                            <span class="sim-nav-label">1. Home Dashboard</span>
+                        </button>
+                        <button class="sim-nav-btn" data-screen="capture">
+                            <span class="sim-nav-icon">◎</span>
+                            <span class="sim-nav-label">2. Target Viewfinder HUD</span>
+                        </button>
+                        <button class="sim-nav-btn" data-screen="analysis">
+                            <span class="sim-nav-icon">☰</span>
+                            <span class="sim-nav-label">3. Analysis & Verification</span>
+                        </button>
+                        <button class="sim-nav-btn" data-screen="success">
+                            <span class="sim-nav-icon">✔</span>
+                            <span class="sim-nav-label">4. Transmission Success</span>
+                        </button>
+                    </div>
+
+                    <!-- Smartphone Device Mockup Container -->
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen-content">
+                            <!-- System Status Bar -->
+                            <div class="phone-status-bar">
+                                <span class="time">12:00 UTC</span>
+                                <span class="status-indicators">📡 🔋 100%</span>
+                            </div>
+
+                            <!-- Phone Screens Layout -->
+                            <div class="phone-screen-viewport">
+                                <!-- SCREEN 1: Home Dashboard -->
+                                <div id="sim-screen-home" class="sim-screen active">
+                                    <div class="app-header">
+                                        <span class="app-title">ASTRO-CORE</span>
+                                        <span class="app-status-chip online">SYSTEM ONLINE</span>
+                                    </div>
+                                    <div class="screen-scrollable">
+                                        <!-- Network Status Card -->
+                                        <div class="glass-card widget-card">
+                                            <div class="card-header">
+                                                <span class="mono-label">Network Status</span>
+                                            </div>
+                                            <h3>Sky Sentinel: Safe</h3>
+                                            <p class="widget-body">Astro-net nodes actively verifying orbital paths. No immediate impact vectors detected within 0.15 AU.</p>
+                                            <div class="widget-stats">
+                                                <div class="stat-box">
+                                                    <span class="stat-label">Threat Level</span>
+                                                    <span class="stat-value">0.02%</span>
+                                                </div>
+                                                <div class="stat-box">
+                                                    <span class="stat-label">Sensors</span>
+                                                    <span class="stat-value">98.4%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Local Observation Card -->
+                                        <div class="glass-card widget-card">
+                                            <div class="card-header">
+                                                <span class="mono-label">Local Radar Sync</span>
+                                            </div>
+                                            <div class="radar-ping-widget">
+                                                <div class="ping-circle"></div>
+                                                <div class="ping-circle-2"></div>
+                                                <div class="ping-core"></div>
+                                            </div>
+                                            <div class="widget-footer-row">
+                                                <span class="coords">40.7128° N, 74.0060° W</span>
+                                                <span class="status-text text-cyan">Excellent (84%)</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Quick Action CTA -->
+                                        <button class="btn btn-primary btn-block sim-action-btn" data-action="go-to-capture">
+                                            📷 QUICK CAPTURE NEO TARGET
+                                        </button>
+
+                                        <!-- Global logs list -->
+                                        <div class="sightings-section">
+                                            <h4>Recent Global Sightings</h4>
+                                            <div class="sighting-item glass-card">
+                                                <div class="sighting-thumbnail"></div>
+                                                <div class="sighting-info">
+                                                    <span class="sighting-id">NEO-2026-JM</span>
+                                                    <span class="sighting-sub">Velocity: 24.5 km/s</span>
+                                                    <span class="danger-pill low">LOW THREAT</span>
+                                                </div>
+                                            </div>
+                                            <div class="sighting-item glass-card">
+                                                <div class="sighting-thumbnail secondary-thumbnail"></div>
+                                                <div class="sighting-info">
+                                                    <span class="sighting-id">NEO-2026-XF</span>
+                                                    <span class="sighting-sub">Velocity: 42.1 km/s</span>
+                                                    <span class="danger-pill high">HIGH TARGET</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- SCREEN 2: Target Viewfinder HUD -->
+                                <div id="sim-screen-capture" class="sim-screen">
+                                    <!-- Viewfinder HUD overlays -->
+                                    <div class="viewfinder-hud">
+                                        <div class="crosshairs"></div>
+                                        <div class="scanner-line"></div>
+                                        <div class="hud-box top-left"></div>
+                                        <div class="hud-box top-right"></div>
+                                        <div class="hud-box bottom-left"></div>
+                                        <div class="hud-box bottom-right"></div>
+                                    </div>
+                                    
+                                    <div class="hud-telemetry-panels">
+                                        <div class="hud-panel left">
+                                            <span class="p-title text-cyan">COORDINATES</span>
+                                            <span class="p-val">RA: 14h 29m</span>
+                                            <span class="p-val">DEC: -60° 50'</span>
+                                        </div>
+                                        <div class="hud-panel right">
+                                            <span class="p-title text-cyan">SYSTEM</span>
+                                            <span class="p-val">AZ: 124.52°</span>
+                                            <span class="p-val">EL: +42.18°</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="screen-scrollable hud-controls">
+                                        <div class="hud-target-indicator">
+                                            <span class="target-name">HD 128620 | MAG: 0.1 | DIST: 4.37 LY</span>
+                                        </div>
+
+                                        <div class="glass-card hud-widget">
+                                            <div class="sync-row">
+                                                <span class="mono-label">Telescope Sync</span>
+                                                <span class="switch active"></span>
+                                            </div>
+                                            <div class="temp-bar-row">
+                                                <span class="mono-label text-gray">MOTOR TEMP: 24.2°C</span>
+                                                <div class="progress-track"><div class="progress-bar"></div></div>
+                                            </div>
+                                            <div class="exposure-row">
+                                                <div class="exp-item">
+                                                    <span class="exp-label">ISO</span>
+                                                    <span class="exp-value">3200</span>
+                                                </div>
+                                                <div class="exp-item">
+                                                    <span class="exp-label">SHUTTER</span>
+                                                    <span class="exp-value">1/500s</span>
+                                                </div>
+                                                <div class="exp-item">
+                                                    <span class="exp-label">F-STOP</span>
+                                                    <span class="exp-value">f/8.0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shutter Dock Bar -->
+                                    <div class="shutter-dock">
+                                        <div class="dock-action">
+                                            <span class="icon">📊</span>
+                                            <span class="label">DATA</span>
+                                        </div>
+                                        <button class="shutter-button sim-action-btn" data-action="capture-image">
+                                            <div class="shutter-inner"></div>
+                                        </button>
+                                        <div class="dock-action">
+                                            <span class="icon">👤</span>
+                                            <span class="label">BIO</span>
+                                        </div>
+                                    </div>
+                                    <div class="camera-flash"></div>
+                                </div>
+
+                                <!-- SCREEN 3: Analysis & Verification -->
+                                <div id="sim-screen-analysis" class="sim-screen">
+                                    <div class="app-header">
+                                        <span class="app-title text-coral">Verification Protocol v4.2</span>
+                                    </div>
+                                    <div class="screen-scrollable">
+                                        <div class="galaxy-preview-box glass-card">
+                                            <span class="cam-ref">CAM_REF_092 // DEEP_SKY_ARRAY</span>
+                                            <div class="mag-row">
+                                                <div class="chip">
+                                                    <span class="c-lbl">MAGNITUDE</span>
+                                                    <span class="c-val">18.42</span>
+                                                </div>
+                                                <div class="chip">
+                                                    <span class="c-lbl">NOISE REDUCTION</span>
+                                                    <span class="c-val">99.8%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="stat-grid-row">
+                                            <div class="glass-card stat-card border-cyan">
+                                                <span class="mono-label">STARS DETECTED</span>
+                                                <h3>4,812</h3>
+                                            </div>
+                                            <div class="glass-card stat-card">
+                                                <span class="mono-label">EXPOSURE TIME</span>
+                                                <h3>240s</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="glass-card report-details-card">
+                                            <h4>OBSERVATION REPORT</h4>
+                                            
+                                            <div class="field-item">
+                                                <span class="mono-label">TIMESTAMP (UTC)</span>
+                                                <div class="read-only-field">2024-05-24 T22:14:05.182 <span class="lock">🔒</span></div>
+                                            </div>
+
+                                            <div class="field-item">
+                                                <span class="mono-label">ORBITAL SECTOR</span>
+                                                <div class="read-only-field">SQ-94 / PHI-7</div>
+                                            </div>
+
+                                            <div class="field-row">
+                                                <div class="field-item flex-1">
+                                                    <span class="mono-label">LAT</span>
+                                                    <div class="read-only-field">44.2443° N</div>
+                                                </div>
+                                                <div class="field-item flex-1">
+                                                    <span class="mono-label">LON</span>
+                                                    <div class="read-only-field">7.7691° E</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field-item">
+                                                <span class="mono-label">TELESCOPE METADATA</span>
+                                                <div class="metadata-box glass-card">
+                                                    <div class="m-row"><span>MOUNT_TYPE:</span><span>EQUATORIAL_GO_TO</span></div>
+                                                    <div class="m-row"><span>FL_DISTANCE:</span><span>2350MM</span></div>
+                                                    <div class="m-row"><span>SENSOR:</span><span>CMOS_FULL_FRAME_45MP</span></div>
+                                                    <div class="m-row"><span>FIRMWARE:</span><span>CORE-OS v9.1.4</span></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field-item">
+                                                <span class="mono-label">OBSERVER NOTES</span>
+                                                <textarea placeholder="No atmospheric interference. Core is clearly defined..." class="sim-textarea"></textarea>
+                                            </div>
+
+                                            <button class="btn btn-primary btn-block sim-action-btn" data-action="submit-uplink">
+                                                SUBMIT REPORT TO NASA ↗
+                                            </button>
+                                            <span class="encryption-warning text-gray">ENCRYPTED UPLINK SECURED via RSA-4096</span>
+                                        </div>
+                                    </div>
+                                    <div class="uplink-loading-overlay">
+                                        <div class="spinner"></div>
+                                        <span class="loading-text text-cyan">Establishing Encrypted Uplink...</span>
+                                    </div>
+                                </div>
+
+                                <!-- SCREEN 4: Transmission Success -->
+                                <div id="sim-screen-success" class="sim-screen">
+                                    <div class="screen-scrollable success-padding">
+                                        <div class="success-header">
+                                            <div class="success-badge">✔</div>
+                                            <h3>Report Transmitted</h3>
+                                            <p class="text-gray">Your deep space telemetry packet has been successfully uplinked. Propagation to terrestrial data centers is currently in progress.</p>
+                                        </div>
+
+                                        <!-- Transmission Pipeline Stepper -->
+                                        <div class="glass-card status-stepper-card border-cyan">
+                                            <div class="card-header-row">
+                                                <span class="mono-label text-cyan">Transmission Pipeline</span>
+                                                <span class="status-pulse-pill">LIVE LINK ACTIVE</span>
+                                            </div>
+                                            <div class="stepper">
+                                                <div class="step completed">
+                                                    <span class="step-bullet">✓</span>
+                                                    <div class="step-text">
+                                                        <span class="s-name">Establish Secure Socket</span>
+                                                        <span class="s-desc">Uplinking telemetry to primary database</span>
+                                                    </div>
+                                                </div>
+                                                <div class="step completed">
+                                                    <span class="step-bullet">✓</span>
+                                                    <div class="step-text">
+                                                        <span class="s-name">Hash Verification</span>
+                                                        <span class="s-desc">SHA-256 validation code matching payload specs</span>
+                                                    </div>
+                                                </div>
+                                                <div class="step active">
+                                                    <span class="step-bullet">●</span>
+                                                    <div class="step-text">
+                                                        <span class="s-name">Terrestrial Propagation</span>
+                                                        <span class="s-desc">Syncing mirror repositories at Goddard spaceflight</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Reference ID Box -->
+                                        <div class="glass-card ref-id-card">
+                                            <span class="mono-label">Reference ID</span>
+                                            <div class="ref-input-row">
+                                                <span class="ref-id text-coral">REF_ID_90812_SEC_4</span>
+                                                <button class="btn-copy sim-action-btn" data-action="copy-ref-id">📋</button>
+                                            </div>
+                                            <span class="ref-desc text-gray">Use this ID for querying verification status at the Deep Space Operations center.</span>
+                                        </div>
+
+                                        <!-- Specs Table -->
+                                        <div class="glass-card specs-card">
+                                            <span class="mono-label">Payload Specs</span>
+                                            <div class="spec-table-row"><span>STATUS:</span><span>VERIFIED</span></div>
+                                            <div class="spec-table-row"><span>FILE SIZE:</span><span>1.48 MB</span></div>
+                                            <div class="spec-table-row"><span>TARGET NAME:</span><span>NEO-2026-JM</span></div>
+                                            
+                                            <button class="btn btn-primary btn-block sim-action-btn" data-action="reset-sim">
+                                                RETURN TO DASHBOARD
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="clipboard-success-toast">Copied to Clipboard!</div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Nav Mockup -->
+                            <div class="phone-bottom-nav">
+                                <div class="nav-item active" data-nav-target="home">
+                                    <span class="icon">⚏</span>
+                                    <span class="label">Home</span>
+                                </div>
+                                <div class="nav-item" data-nav-target="capture">
+                                    <span class="icon">📷</span>
+                                    <span class="label">Capture</span>
+                                </div>
+                                <div class="nav-item" data-nav-target="analysis">
+                                    <span class="icon">📊</span>
+                                    <span class="label">Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Setup Section -->
+        <section id="setup" class="setup-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Developer Integration & Quick Start</h2>
+                    <p>Instructions for building the Android Jetpack Compose codebase locally on your workstation.</p>
+                </div>
+
+                <div class="setup-grid">
+                    <div class="setup-guide glass-card">
+                        <h3>Build Steps</h3>
+                        <ol>
+                            <li>Clone this repository:
+                                <pre><code>git clone https://github.com/Agilegallie/astro-core.git</code></pre>
+                            </li>
+                            <li>Open <code>/astro-core</code> in <strong>Android Studio</strong>.</li>
+                            <li>Install the <strong>Android 17 (API 37)</strong> SDK under:
+                                <br><code>Tools → SDK Manager → Android Cinnamon Bun Preview</code>
+                            </li>
+                            <li>Sync Gradle project files and compile the module.</li>
+                            <li>Deploy application code onto a physical Pixel device or emulator running <strong>API 28+</strong>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="setup-specs glass-card">
+                        <h3>Configuration Specs</h3>
+                        <table class="specs-table">
+                            <thead>
+                                <tr>
+                                    <th>Setting</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Kotlin Version</strong></td>
+                                    <td><code>2.2.10</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Jetpack Compose</strong></td>
+                                    <td><code>Material 3 / BOM 2025.06</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>compileSdk</strong></td>
+                                    <td><code>37</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>targetSdk</strong></td>
+                                    <td><code>37</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>minSdk</strong></td>
+                                    <td><code>28</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gradle Plugin</strong></td>
+                                    <td><code>9.2.1</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Brett Gallie. Built with Jetpack Compose & Vanilla Web Tech stack for World Asteroid Day.</p>
+            <div class="social-links">
+                <a href="https://github.com/Agilegallie" target="_blank">GitHub</a>
+                <a href="https://www.brettgallie.com" target="_blank">Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simulator Controller script -->
+    <script src="app.js"></script>
+</body>
+</html>
